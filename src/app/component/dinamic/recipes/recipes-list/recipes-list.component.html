@@ -1,0 +1,21 @@
+<hr>
+<ul class="list-inline">
+     <div class="border p-0" *ngFor="let item of recipes">
+          <a [routerLink]="['/recipes', item.id]" routerLinkActive="router-link-active" >
+               <div class="d-flex p-1" style="overflow: hidden">
+                    <div class="col-9">
+                         <li class="d-flex flex-column">
+                              <h4>{{item.name}}</h4>
+                              <small>
+                                   {{item.description}}
+                              </small>
+                         </li>
+                    </div>
+                    <div class="col-3 d-flex flex-column align-items-center">
+                         <img src="{{item.imageURL}}" alt="" style="height: 70px">
+                    </div>
+               </div>
+          </a>
+
+     </div>
+</ul>

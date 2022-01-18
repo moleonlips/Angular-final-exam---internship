@@ -1,0 +1,14 @@
+<div class="container">
+     <button class="btn btn-success" (click)="newRecipe()">New Recipe</button>
+     <div class="col-12">
+          <div class="row">
+               <div class="col-6">
+                    <app-recipes-list></app-recipes-list>
+               </div>
+               <div class="col-6">
+                    <h3 *ngIf="isParent">Please select a Recipe</h3>
+                    <router-outlet class="outlet"></router-outlet>
+               </div>
+          </div>
+     </div>
+</div>

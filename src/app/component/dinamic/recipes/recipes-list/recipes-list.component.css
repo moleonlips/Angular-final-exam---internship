@@ -1,0 +1,14 @@
+a{
+     text-decoration: none;
+     color: #333;
+}
+
+.border{
+     padding: 16px 0;
+}
+
+.router-link-active{
+     background-color: rgb(97, 200, 226);
+     color: #fff;
+     display: block;
+}

@@ -1,0 +1,20 @@
+<div class="d-flex flex-column">
+     <img [src]="recipe.imageURL" alt="hinh anh">
+     <h2>{{recipe.name}}</h2>
+     <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+            Manager Recipes
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" *ngIf="recipe.id" (click)="toShoppingList(recipe.id)">To Shopping List</a>
+            <a class="dropdown-item" *ngIf="recipe.id" (click)="edit(recipe.id)">Edit recipe</a>
+            <a class="dropdown-item" *ngIf="recipe" (click)="deleteRecipe(recipe.id)">Delete recipe</a>
+          </div>
+        </div>
+     <small class="p-3">{{recipe.description}}</small>
+     <ul class="list-inline" *ngIf="recipe.ingredients">
+          <li *ngFor="let item of recipe.ingredients" class="border p-1">
+               {{item.name}} ({{item.quantity}})
+          </li>
+     </ul>
+</div>
